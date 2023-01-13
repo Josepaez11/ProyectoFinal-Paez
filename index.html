@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords" content="ropa, niños,inclusion, indumentaria">
+  <meta name="description"
+      content="Ropa para niños y adolescentes inclusiva, con estampas escritas en braille y lengua de señas, ¡conoce ahora nuestros productos!">
+  <meta property="og:url" content="https://pakopeko.com.ar ">
+  <title>Pako Peko</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="stylesheet" href="public/css/estilo.css">
+  <link rel="icon" type="favicon/x-icon" href="public/images/logo pako peko.png"/>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+  integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
+<body>
+
+  <header>
+    <img class="logo" src="/public/images/logo pako peko.png" alt="logo">
+    <button id="cesta-carrito"><i class="fas fa-shopping-cart"></i><span id="contador-carrito">0</span></button>
+  </header>
+
+  <main id="producto-contenedor">
+
+  </main>
+
+  <div class="modal-contenedor">
+    <div class="modal-carrito">
+      <h3>Carrito</h3>
+      <button id="btn-cerrar-carrito"><i class="fas fa-times-circle"></i></button>
+      <div id="carrito-contenedor">
+      </div>
+      <p class="precioProducto">Precio total: $<span id="precioTotal"></span></p>
+      <button class="btn-success">Finalizar compra</button>
+    </div>
+  </div>
+  <footer id=footer_index class="row">
+    <div class="col-6">
+        <h3>Acerca de Nosotros:</h3>
+        <h5> Pako Peko: ropa de aventuras </h5>
+        <h5> Direccion: La Prida 556 - Cordoba, Argentina</h5>
+        <h5>Teléfono: 111 111 111</h5>
+        <h5>Email: pakopekook@gmail.com</h5>
+        <hr>
+    </div>
+
+    <div class="col-6">
+        <h3> Seguinos en Instagram: </h3>
+        <h5>pakopeko</h5>
+    </div>
+</footer>
+  <script src="src/components/data/stock.js"></script>
+  <script src="src/components/cart/modal.js"></script>
+  <script src="src/components/cart/cart.js"></script>
+  <script src="src/App.js"></script>
+  <script src="src/index.js"></script>
+  <script src="https://kit.fontawesome.com/df59baf6b8.js" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+  integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+  crossorigin="anonymous"></script>
+
+</body>
+
+</html>

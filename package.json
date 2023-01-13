@@ -1,0 +1,29 @@
+{
+  "name": "proyectofinal",
+  "version": "1.0.0",
+  "description": "Tienda online Pako Peko",
+  "main": "index.js",
+  "dependencies": {
+    "luxon": "^3.2.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Josepaez11/ProyectoFinal-Paez.git"
+  },
+  "keywords": [
+    "ropa",
+    "niños",
+    "inclusion",
+    "indumentaria"
+  ],
+  "author": "Josefina Paez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Josepaez11/ProyectoFinal-Paez/issues"
+  },
+  "homepage": "https://github.com/Josepaez11/ProyectoFinal-Paez#readme"
+}
