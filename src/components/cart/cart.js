@@ -2,6 +2,51 @@ let carrito = [];
 
 const productoContenedor = document.getElementById('producto-contenedor');
 
+const vaciarCarrito = document.getElementById("btn-vaciar-carrito");
+
+productoContenedor.addEventListener('click', (e) => {
+    if (e.target.classList.contains('agregar')) {
+        validarProductoRepetido(e.target.id)
+        Toastify({
+            text: '¡El producto fue agregado con éxito!',
+            duration: 3000,
+            gravity: "bottom",
+            position: "right",
+            stopOnFocus: true,
+            style: {
+              background: "linear-gradient(to right, #212529, rgb(216, 49, 80))",
+            }
+
+        }).showToast()
+    }
+});
+
+// Funcion para vaciar el carrito con un solo click
+
+vaciarCarrito.addEventListener("click", () => {
+    while (localStorage.length > 0) {
+        localStorage.removeItem(localStorage.key(0));
+    }
+    if (carrito.length===0) {
+        Swal.fire ({
+            icon:"error",
+            text:"El carrito ya esta vacio",
+            showConfirmButton: false,
+            timer: 2000
+        })
+    } else {
+    carrito.length = 0
+    Swal.fire({
+        icon:"success",
+        text:"Carrito vaciado con exito",
+        showConfirmButton: false,
+        timer: 2000
+    })
+    }
+    actualizarCarrito(carrito);
+    actualizarTotalesCarrito(carrito);
+});
+
 productoContenedor.addEventListener('click', (e) => {
     if (e.target.classList.contains('agregar')) {
         validarProductoRepetido(e.target.id)

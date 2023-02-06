@@ -2,7 +2,6 @@ const modalContenedor = document.querySelector('.modal-contenedor');
 const abrirCarrito = document.getElementById('cesta-carrito');
 const cerrarCarrito = document.getElementById('btn-cerrar-carrito');
 const modalCarrito = document.querySelector('.modal-carrito');
-const botonVaciar = document.getElementById('vaciar-carrito');
 //ABRIR CARRITO
 abrirCarrito.addEventListener('click', () => {
     modalContenedor.classList.toggle('modal-active')
@@ -25,8 +24,3 @@ modalCarrito.addEventListener('click', (e) => {
         eliminarProductoCarrito(e.target.value);
     }
 })
-//VACIAR CARRITO
-botonVaciar.addEventListener('click', () => {
-    carrito.length = 0
-    actualizarCarrito()
-  })
