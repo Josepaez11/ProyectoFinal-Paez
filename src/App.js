@@ -18,3 +18,8 @@ const pintarProductos = () => {
     contenedor.appendChild(div);
   });
 };
+
+botonVaciar.addEventListener('click', () => {
+  carrito.length = 0
+  actualizarCarrito()
+})
