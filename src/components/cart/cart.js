@@ -37,14 +37,14 @@ const pintarProductoCarrito = (producto) => {
     `
     contenedor.appendChild(div);
 };
-
+//ELIMINAR PRODUCTO DEL CARRITO
 const eliminarProductoCarrito = (productoId) => {
     const productoIndex = carrito.findIndex(producto => producto.id == productoId);
     carrito.splice(productoIndex, 1);
     actualizarCarrito(carrito);
     actualizarTotalesCarrito(carrito);
 };
-
+//ACTUALIZAR CARRITO
 const actualizarCarrito = (carrito) => {
     const contenedor = document.getElementById('carrito-contenedor');
 
@@ -71,7 +71,7 @@ const obtenerCarritoStorage = () => {
     const carritoStorage = JSON.parse(localStorage.getItem('carrito'));
     return carritoStorage;
 };
-
+//ACTUALIZAR CANTIDAD DE PRODUCTOS DEL CARRITO
 const actualizarTotalesCarrito = (carrito) => {
     const totalCantidad = carrito.reduce((acc, item) => acc + item.cantidad, 0);
     const totalCompra = carrito.reduce((acc, item) => acc + (item.precio * item.cantidad), 0);
